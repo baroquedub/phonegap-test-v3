@@ -1,0 +1,331 @@
+
+/* UTILITIES
+-------------------------------------------------- */
+
+
+.jdp-inline{
+	display: inline-block;
+	padding-right:14px;
+	margin-right:10px;
+}
+
+.small, .smaller{
+	font-size:smaller !important;
+}
+ul.small li, ul.smaller li{
+	font-size:smaller !important;
+}
+.medium{
+	font-size:100% !important;	
+}
+.alignCenter { 
+	text-align: center !important; 
+}
+.alignLeft { 
+	text-align: left !important; 
+}
+.noMargin{
+	margin:0 !important;
+}
+.marginRight{ 
+	margin-right:15px !important;
+}
+.marginLeft{ 
+	margin-left:15px !important;
+}
+.marginTop{ 
+	margin-top:30px !important;
+}
+.marginBottom{ 
+	margin-bottom:30px !important;
+}
+
+.noPadding{
+	 padding:0 !important;	
+}
+.noMarginNoPadding{
+	margin:0 !important; padding:0 !important;
+}
+
+/* Overwrite Bootstrap defaults
+-------------------------------------------------- */
+
+
+body{
+	background-color:#FBFBFB; /* not pure white - for dyslexic users */
+}
+
+.accordion {
+	background-color:#FFF;
+}
+
+legend {
+
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #575757 !important;
+	font-weight: 200;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 22px;
+border: 0;
+border-bottom: 1px solid #e5e5e5;
+}
+legend.plain{
+	border:0;
+}
+
+
+
+/* Fixed banner styles
+-------------------------------------------------- */
+	  header.fixed-banner{
+		 position:fixed !important;
+		  width:100% !important;
+		  z-index:2 !important;
+	  }
+	  header.fixed-banner+div{
+		  padding-top:136px !important;
+	  }
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+	header.fixed-banner{
+		 position:relative !important;
+		 width:auto !important;
+	}
+	header.fixed-banner+div{
+		  padding-top:0 !important;
+	  }
+	  div.page-header{
+		   margin-top:20px !important;
+	  }
+}
+@media (max-width: 767px) {
+	header.fixed-banner{
+		text-align: center !important;
+		 position:relative !important;
+		 width:auto !important;
+	}
+	header.fixed-banner+div{
+		  padding-top:0 !important;
+	  }
+
+}
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+	header.fixed-banner{
+		text-align: center !important;
+		 position:relative !important;
+		 width:auto !important;
+	}
+	header.fixed-banner+div{
+		  padding-top:0 !important;
+	  }
+
+	  .jdp-site-sidenav{
+		  width:100% !important;
+		  max-width: 220px;
+		  margin-bottom:30px;
+	  }
+
+}
+
+/* Accordion nested in nav-list
+-------------------------------------------------- */
+.nav-list .accordion {
+	margin-bottom: -2px;
+	 -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.nav-list .accordion a{
+	text-decoration:none;	
+}
+
+.nav-list .accordion .accordion-inner .nav-list a {
+padding-top:2px;
+ padding-bottom:2px;
+ 
+ -webkit-border-bottom-left-radius:2em;
+     -moz-border-bottom-left-radius:2em;
+          border-bottom-left-radius:2em;
+ -webkit-border-top-left-radius:2em;
+     -moz-border-top-left-radius:2em;
+          border-top-left-radius:2em;
+}
+.nav-list .accordion-heading > a:hover {
+  background-color: #f5f5f5;
+}
+
+
+.nav-list .accordion .accordion-group{
+	margin-bottom: 0;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+		  border-bottom: none;
+}
+.nav-list .accordion .accordion-inner {
+padding-top:7px;
+}
+
+.nav-list .nav-list{
+	padding:0;
+	padding-left:20px;	
+}
+
+/* Fixes
+-------------------------------------------------- */
+
+@media (max-width: 480px) {
+    .modal-fullscreen {
+      left: 0 !important;
+      right: 0 !important;
+      margin-top: 0 !important;
+      margin-left: 0 !important;
+    }
+}
+
+ul.well{ padding-left:35px; }
+
+.dropdown-menu li{
+	padding-left:10px;
+}
+li.dropdown.smaller ul.dropdown-menu li{
+	font-size:100% !important;
+}
+li.dropdown.smaller ul.dropdown-menu li hr{
+	line-height:1em !important;
+	margin-top:5px !important;
+	margin-bottom:5px !important;
+	margin-right:10px;
+}
+
+/* Tweaks
+-------------------------------------------------- */
+
+img.pull-left, div.img.pull-left{
+	margin-right:20px;
+}
+img.pull-right, div.img.pull-right{
+	margin-left:20px;
+}
+
+.muted a,.muted a:active,.muted a:visited{
+color: #7B8B9B;	
+}
+.muted a:hover{
+color: #5B6B7B;	
+}
+
+.alert-warning a,.alert-warning a:active,.alert-warning a:visited{
+color: #AA7945;	
+}
+
+.alert-warning a:hover{
+color: #50402B;	
+}
+/* Text Carousel
+-------------------------------------------------- */
+	  .carousel-text{
+		  height:auto;
+		  padding-bottom:20px;
+	  }
+	  .carousel-text .item{
+		  margin-right:20px;
+	  }
+	  .carousel-text-control{
+			position:absolute; 
+			bottom:0px;
+			margin:-40px auto;
+			padding-left:50%;
+	  }
+	  .carousel-text-control .carousel-control {
+		  position: relative;
+		  margin-top:20px;
+		  font-size: 30px;
+		  font-weight: 100;
+		  line-height: 30px;
+		  color: #000;
+		  text-align: center;
+		  border: none;
+		  background:none;
+		  opacity: 0.5;
+		  filter: alpha(opacity=50);
+		}
+		.carousel-text-control .carousel-control.left {
+		  margin-right: 25px;
+		}
+		.carousel-text-control .carousel-control.right {
+		  margin-left: 25px;
+		}
+		
+		.carousel-text-control .carousel-control:hover {
+		  color: #000;
+		  text-decoration: none;
+		  opacity: 0.9;
+		  filter: alpha(opacity=90);
+		}
+@media (max-width: 480px) {
+		.carousel-text-control{
+			position:relative; 
+			margin:30px auto;
+			padding:none;
+	  }
+}
+
+/* Flip Scroll table
+-------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+	
+	.flip-scroll-table .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	.flip-scroll-table * html .cf { zoom: 1; }
+	.flip-scroll-table *:first-child+html .cf { zoom: 1; }
+	
+	.flip-scroll-table table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+ 
+	.flip-scroll-table th,
+	.flip-scroll-table td { margin: 0; vertical-align: top; }
+	.flip-scroll-table th { text-align: left; }
+	
+	.flip-scroll-table table { display: block; position: relative; width: 100%; margin-top:10px; margin-bottom:5px; }
+	.flip-scroll-table thead { display: block; float: left; }
+	.flip-scroll-table tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+	.flip-scroll-table thead tr { display: block; }
+	.flip-scroll-table th { display: block; text-align: right; }
+	.flip-scroll-table tbody tr { display: inline-block; vertical-align: top; }
+	.flip-scroll-table td { display: block; min-height: 1.25em; text-align: left; }
+ 
+ 
+	/* sort out borders */
+ 
+	.flip-scroll-table th { border-bottom: 0; border-left: 0; }
+	.flip-scroll-table td { border-left: 0; border-right: 0; border-bottom: 0; }
+	.flip-scroll-table tbody tr { border-left: 1px solid #babcbf; }
+	.flip-scroll-table th:last-child,
+	.flip-scroll-table td:last-child { border-bottom: 0; }
+}
+
+
+/* Plain Box 
+-------------------------------------------------- */
+.box {
+	background: #FFF !important;
+	border: 1px solid #E0E0E0 !important;
+	margin: 20px 0 !important;
+	padding: 20px 30px 18px 30px !important;
+	color: #575757 !important;
+	display: block;
+}
+/* Tabbed content
+-------------------------------------------------- */
+.tab-pane.box{
+	border-top:none !important;
+	margin-top:0 !important;	
+}
+ul.nav.nav-tabs{
+	margin-bottom:0 !important;	
+}

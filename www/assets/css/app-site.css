@@ -1,0 +1,892 @@
+/* JDP Site
+-------------------------------------------------- */
+/*
+  Based on the styles for the Bootstrap docs site
+*/
+
+/* Body and structure
+-------------------------------------------------- */
+
+body {
+  
+}
+.container{
+	max-width: 900px;	
+}
+
+/* Fix typography  */
+p.lead, p{
+	margin-bottom:8px;
+	font-size:16px;
+	font-weight:200;
+	line-height:24px
+}
+p,li {
+	font-weight:200;
+	margin-bottom:10px;
+	font-size:14px;
+	line-height:22px;
+}
+li{
+	margin-bottom:5px;
+}
+.alert{
+	font-weight:200;
+	font-size:15px;
+	line-height:22px;
+}
+div p:last-child{
+	margin-bottom:40px;
+}
+.jumbotron div p:last-child {
+	margin-bottom:12px;
+}
+.alert div p:last-child{
+	margin-bottom:2px !important;
+}
+
+.page-header{
+	padding-bottom:6px;
+	margin:40px 0 20px;
+	border-bottom:1px solid #eee
+}
+
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+
+body > .navbar {
+  font-size: 13px;
+}
+
+/* Change the site's brand (in navbar) */
+body > .navbar .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+body > .navbar .brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+
+
+/* Sections
+-------------------------------------------------- */
+
+/* padding for in-page bookmarks and fixed navbar */
+section {
+  padding-top: 30px;
+}
+section > .page-header,
+section > .lead {
+  color: #5a5a5a;
+}
+section > ul li {
+  margin-bottom: 5px;
+}
+
+/* Separators (hr) */
+.jdp-site-separator {
+  margin: 40px 0 39px;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 70px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+.jumbotron {
+  position: relative;
+  padding: 10px 0;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  background: #70A0C0; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #104060 0%, #70A0C0 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#104060), color-stop(100%,#70A0C0)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #104060 0%,#70A0C0 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #104060 0%,#70A0C0 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #104060 0%,#70A0C0 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #104060 0%,#70A0C0 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#104060', endColorstr='#70A0C0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+.jumbotron h1 {
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+/* Link styles */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+
+
+/* Pattern overlay
+------------------------- */
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(img/denim.png) repeat center center;
+  opacity: .6;
+}
+/*retina version*/
+		@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+		only screen and (-moz-min-device-pixel-ratio: 1.5),
+		only screen and (-o-min-device-pixel-ratio: 3/2),
+		only screen and (min-device-pixel-ratio: 1.5) {
+		  .jumbotron:after {
+			  background: url(img/denim_@2x.png) repeat center center;
+		  }
+		}
+
+
+/* Subhead (other pages)
+------------------------- */
+.subhead {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.subhead h1 {
+  font-size: 30px;
+}
+.subhead p {
+  margin-bottom: 15px;
+}
+.subhead .navbar {
+  display: none;
+}
+
+
+
+
+
+
+/* Footer
+-------------------------------------------------- */
+	/* Prepare Sticky footer */
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+	/* style footer */
+	#footer .container{
+		width: auto;
+		 max-width: 790px;
+	}
+	.footer-links {
+	  margin: 20px 0 10px 0;
+	}
+	.footer-links li {
+	  display: inline;
+	  padding: 0 2px;
+	}
+	.footer-links li:first-child {
+	  padding-left: 0;
+	}
+
+
+/* Misc
+-------------------------------------------------- */
+
+/* Make tables spaced out a bit more */
+h2 + table,
+h3 + table,
+h4 + table,
+h2 + .row {
+  margin-top: 5px;
+}
+
+.smaller{
+	font-size: smaller;
+}
+sup{
+font-size:x-small;
+}
+
+.semi-muted{
+	color: #777;
+}
+
+.hide-but-keep{
+	visibility:hidden;
+}
+.blue{
+	color: #2B5D9A;
+}
+.bold{
+	font-weight:bold;
+}
+
+/* TABLES */
+
+.my-header {
+	color:#fff;
+	background-color: #777;
+}
+.my-header th{
+	display:table-cell;
+	vertical-align: top;
+	font-weight: normal !important;
+}
+
+/* Sidenav for JDP Site
+-------------------------------------------------- */
+
+.jdp-site-sidenav {
+	float:left;
+  width: 208px;
+  margin: 30px 0 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.jdp-site-sidenav li{
+margin: 0;	
+}
+.jdp-site-sidenav > li > a {
+  display: block;
+  width: 170px \9;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.jdp-site-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.jdp-site-sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.jdp-site-sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.jdp-site-sidenav .icon-chevron-right, .jdp-site-sidenav .icon-plus, .jdp-site-sidenav .icon-minus{
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+
+.jdp-site-sidenav .icon-arrow-up {
+  float: left;
+  margin-top: 2px;
+  margin-right: 6px;
+  opacity: .25;
+}
+.jdp-site-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.jdp-site-sidenav a:hover .icon-chevron-right, .jdp-site-sidenav a:hover .icon-arrow-up, .jdp-site-sidenav a:hover .icon-plus, .jdp-site-sidenav a:hover .icon-minus {
+  opacity: .5;
+}
+.jdp-site-sidenav .active .icon-chevron-right,
+.jdp-site-sidenav .active a:hover .icon-chevron-right,
+.jdp-site-sidenav .active .icon-minus,
+.jdp-site-sidenav .active a:hover .icon-minus,
+.jdp-site-sidenav .active .icon-plus,
+.jdp-site-sidenav .active a:hover .icon-plus,
+.jdp-site-sidenav .active .icon-arrow-up,
+.jdp-site-sidenav .active a:hover .icon-arrow-up {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.jdp-site-sidenav.affix {
+  top: 40px;
+}
+.jdp-site-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+
+/* Customize the navbar links to be fill the entire space of the .navbar */
+      .tabs .navbar-inner {
+        padding: 0;
+      }
+      .tabs .nav {
+        margin: 0;
+      }
+      .tabs .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+      .tabs .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .tabs .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .tabs .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+	  .tabs .nav li.active a{
+		  border-left: 0;
+	  }
+	  
+	  .navbar li{
+			line-height:20px;
+			margin-bottom:0px;
+		}
+
+
+/* Notes boxes
+-------------------------------------------------- */
+
+/* Base class */
+.jdp-site-notes {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+/* Echo out a label for the example */
+.jdp-site-notes:after {
+  content: "Notes";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+     -moz-border-radius: 4px 0 4px 0;
+          border-radius: 4px 0 4px 0;
+}
+
+/* Remove spacing between an example and it's code */
+.jdp-site-notes + .prettyprint {
+  margin-top: -20px;
+  padding-top: 15px;
+}
+
+/* Tweak examples
+------------------------- */
+.jdp-site-notes > p:last-child {
+  margin-bottom: 0;
+}
+.jdp-site-notes .table,
+.jdp-site-notes .progress,
+.jdp-site-notes .well,
+.jdp-site-notes .alert,
+.jdp-site-notes .hero-unit,
+.jdp-site-notes .pagination,
+.jdp-site-notes .navbar,
+.jdp-site-notes > .nav,
+.jdp-site-notes blockquote {
+  margin-bottom: 5px;
+}
+.jdp-site-notes .pagination {
+  margin-top: 0;
+}
+
+
+/* HELPERS
+-------------------------------------------------- */
+.centeredText {
+	text-align:center;	
+}
+
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .jdp-site-container {
+    max-width: 970px;
+  }
+  .jdp-site-sidenav {
+    width: 208px;
+  }
+  .jdp-site-sidenav > li > a {
+    width: 180px \9; /* Override the previous IE8-9 hack */
+  }
+  
+        /* refloat wide nav menu */
+      .tabs .nav {
+		width: auto;
+		 display: table;
+      }
+      .tabs .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  
+
+  /* Inline-block quick links for more spacing */
+  .quick-links li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  /* When affixed, space properly */
+  .jdp-site-sidenav {
+    top: 0;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  .page-header{
+	 margin-top: -20px !important; /* Offset bottom margin on .navbar */
+}
+
+}
+
+/* Tabs reset
+------------------------- */
+@media (min-width: 480px) and (max-width: 1200px) {
+	 /* refloat wide nav menu */
+      .tabs .nav {
+		width: auto;
+		 display: table;
+      }
+      .tabs .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+	  .tabs .nav li a {
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .tabs .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .tabs .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+	  
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  /* Widen masthead and social buttons to fill body padding */
+  .jumbotron {
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+  }
+  /* Adjust sidenav width */
+  .jdp-site-sidenav {
+    width: 166px;
+    margin-top: 20px;
+  }
+  .jdp-site-sidenav.affix {
+    top: 0;
+  }
+  div.navbar{
+	  margin-bottom:0 !important;
+  }
+ #section1{
+	padding-top: 10px !important; /* Offset bottom margin on .navbar */
+}
+  
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  /* Widen masthead and social buttons to fill body padding */
+  .jumbotron {
+    padding: 20px 20px;
+    margin-top:   -20px; /* Offset bottom margin on .navbar */
+    margin-right: -20px;
+    margin-left:  -20px;
+	
+  }
+
+  /* Sidenav */
+  .jdp-site-sidenav {
+    width: auto;
+    margin-bottom: 20px;
+	margin-right:20px;
+  }
+  .jdp-site-sidenav.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  /* Unfloat the back to top link in footer */
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer p {
+    margin-bottom: 9px;
+  }
+
+
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+/* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+	.jumbotron{
+		text-align: center !important;
+	}
+  /* Downsize the jumbotrons */
+  .jumbotron h1 {
+    font-size: 30px;
+  }
+  .jumbotron p,
+  .jumbotron .btn {
+    font-size: 12px;
+  }
+  .jumbotron .btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* center align subhead text like the masthead */
+  .subhead h1,
+  .subhead p {
+    text-align: center;
+  }
+
+  /* Do our best to make tables work in narrow viewports */
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  /* Tighten up footer */
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* Unfloat the back to top in footer to prevent odd text wrapping */
+  .footer .pull-right {
+    float: none;
+  }
+  
+  .tabs .nav {
+        width: 100%;
+      }
+  .tabs .nav li {
+        display: block;
+        width: 100%;
+      }
+  .tabs .nav li a {
+		border-bottom: 1px solid rgba(255,255,255,.75);
+		border-top: 1px solid rgba(0, 0, 0, .1);
+      }
+      .tabs .nav li:first-child a {
+		-webkit-border-top-left-radius: 3px;
+		-webkit-border-top-right-radius: 3px;
+		-moz-border-radius-topleft: 3px;
+		-moz-border-radius-topright: 3px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+        border-right: none;
+		border-top: none;
+      }
+      .tabs .nav li:last-child a {
+		-webkit-border-bottom-left-radius: 3px;
+		-moz-border-radius-bottomleft: 3px;
+		border-bottom-left-radius: 3px;
+        border-left: none;
+		border-bottom: none;
+      }
+	  .tabs .nav li.active+li a {
+		border:none;
+	  }
+
+	  
+}
+
+
+/************** File type lists **************/
+.noBullets{
+list-style:none;
+}
+ul.docs {
+	list-style-image:     url("img/file-icons/doc-small.gif");
+	margin-left: 10px;
+}
+* html ul.docs{
+margin-left:40px;
+}
+ul.docs li {
+	margin-bottom: 4px;
+	padding-left: 6px;
+	list-style-image:     url("img/file-icons/doc-small.gif");
+}
+ul.docs li.pdf {
+	list-style-image:     url("img/file-icons/pdf-small.gif");
+}
+ul.docs li.txt {
+	list-style-image:     url("img/file-icons/txt-small.gif");
+}
+ul.docs li.ppt {
+	list-style-image:     url("img/file-icons/ppt-small.gif");
+}
+ul.docs li.xls {
+	list-style-image:     url("img/file-icons/xls-small.gif");
+}
+ul.docs li.map {
+	list-style-image:     url("img/file-icons/map-small.gif");
+}
+ul.docs li.doc {
+	list-style-image:     url("img/file-icons/doc-small.gif");
+}
+
+/************** File type icons **************/
+a.icon {
+	background-repeat: no-repeat;
+	padding-left:20px;
+	line-height:1.6em;
+}
+a[href$=".doc"].icon, a[href$=".docx"].icon {
+	background-image:  url("img/file-icons/doc-small.gif");
+}
+a[href$=".pdf"].icon {
+	background-image:  url("img/file-icons/pdf-small.gif");
+}
+a[href$=".txt"].icon {
+	background-image:  url("img/file-icons/txt-small.gif");
+}
+a[href$=".ppt"].icon, a[href$=".pptx"].icon  {
+	background-image:  url("img/file-icons/ppt-small.gif");
+}
+a[href$=".xls"].icon, a[href$=".xlsx"].icon  {
+	background-image:  url("img/file-icons/xls-small.gif");
+}
+
+
+/************** Reading lists **************/
+ul.reading {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-left:20px;
+	padding-top:5px;
+	padding-bottom:10px;
+}
+
+ul.reading li {
+	padding-left: 3.5em;
+	/*line-height:3;*/
+	margin-bottom:10px;
+}
+
+ul.reading li.article {
+	background-image: url("img/file-icons/article.gif");
+	background-position: 0em .4em;
+	background-repeat: no-repeat;
+}
+ul.reading li.book {
+	background-image: url("img/file-icons/book.gif");
+	background-position: 0em .4em;
+	background-repeat: no-repeat;
+}
+ul.reading li.website {
+	background-image: url("img/file-icons/website.gif");
+	background-position: 0em .4em;
+	background-repeat: no-repeat;
+}
+
+
+
+/* Bootstrap overrides */
+.alert-info{color:#2f7ba3}
+
+/* tabs */
+.nav-tabs > li > a {
+border-color: #EEE #EEE #DDD;
+color: #8A9BA3;
+}
+.nav-tabs > li > a:hover {
+border-color: transparent;
+color: #0088CC;
+}
+.nav > li > a {
+text-decoration: none;
+/*background-color: #EEE;*/
+}
+.nav > li > a:hover {
+text-decoration: none;
+background-color: #E9E9E9;
+}
+
+/* references 
+<div class="well references"> */
+.references h1,.references h2,.references h3,.references h4,.references h5{
+	margin-top:0;
+}
+.references h1,.references h2,.references h3,.references h4,.references h5,.references p{
+	font-size:smaller;
+}
+div.references p:last-child {
+margin-bottom: 10px;
+}
+div.references.well{
+padding-bottom:10px;	
+}
+
+/*Retina Image Divs*/
+.img-div{width:auto\9;height:auto;max-width:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic}
+
+/*########################################################*/
+/* QUIZ Styles */
+
+.question{
+	display:none;
+}
+
+#progressContainer {
+margin: 0 auto;
+position: relative;
+}
+.progressChunk {
+display:inline-block;
+text-align:center;
+}
+
+
+/*########################################################*/
+
