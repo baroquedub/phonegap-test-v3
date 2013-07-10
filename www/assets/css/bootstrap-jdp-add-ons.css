@@ -9,8 +9,14 @@
 	margin-right:10px;
 }
 
-.small{
-	font-size:smaller;	
+.small, .smaller{
+	font-size:smaller !important;
+}
+ul.small li, ul.smaller li{
+	font-size:smaller !important;
+}
+.medium{
+	font-size:100% !important;	
 }
 .alignCenter { 
 	text-align: center !important; 
@@ -185,7 +191,18 @@ padding-top:7px;
 
 ul.well{ padding-left:35px; }
 
-
+.dropdown-menu li{
+	padding-left:10px;
+}
+li.dropdown.smaller ul.dropdown-menu li{
+	font-size:100% !important;
+}
+li.dropdown.smaller ul.dropdown-menu li hr{
+	line-height:1em !important;
+	margin-top:5px !important;
+	margin-bottom:5px !important;
+	margin-right:10px;
+}
 
 /* Tweaks
 -------------------------------------------------- */
